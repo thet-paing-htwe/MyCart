@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_marginVertical="1dp">
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
+    <androidx.cardview.widget.CardView
+        android:layout_width="0dp"
+        android:layout_height="100dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:cardCornerRadius="5dp"
+        android:layout_margin="5dp"
+        android:id="@+id/imgCard"
+        app:layout_constraintRight_toLeftOf="@+id/detail">
+
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+       android:layout_gravity="center"
+        android:src="@drawable/ic_launcher_background"
+        android:id="@+id/img"/>
+    </androidx.cardview.widget.CardView>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        app:layout_constraintLeft_toRightOf="@+id/imgCard"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_margin="5dp"
+       app:layout_constraintRight_toLeftOf="@+id/txtDiscount"
+        android:id="@+id/detail"
+        >
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Fine Grain Sugar"
+        android:id="@+id/txtName"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toTopOf="@+id/txtPrice"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Price-$"
+        app:layout_constraintTop_toBottomOf="@+id/txtName"
+        android:layout_marginVertical="5dp"
+        android:textSize="15sp"
+        android:id="@+id/txtPrice"
+        app:layout_constraintBottom_toTopOf="@+id/const1"
+        app:layout_constraintLeft_toLeftOf="parent"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="20.00"
+            app:layout_constraintTop_toBottomOf="@+id/txtName"
+            android:layout_marginVertical="5dp"
+            android:textSize="15sp"
+            android:id="@+id/price"
+            app:layout_constraintBottom_toTopOf="@+id/const1"
+            app:layout_constraintLeft_toRightOf="@+id/txtPrice"
+            app:layout_constraintBaseline_toBaselineOf="@+id/txtPrice"
+            />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/txtPrice"
+        android:layout_marginVertical="5dp"
+        android:id="@+id/const1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+    >
+        <Button
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:background="@drawable/add"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:id="@+id/btnAdd"
+            app:layout_constraintRight_toLeftOf="@+id/weight"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1"
+            app:layout_constraintLeft_toRightOf="@+id/btnAdd"
+            app:layout_constraintRight_toLeftOf="@+id/txtWeight"
+            app:layout_constraintTop_toTopOf="parent"
+            android:id="@+id/weight"
+            android:textSize="15sp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Kg"
+            app:layout_constraintLeft_toRightOf="@+id/weight"
+            app:layout_constraintRight_toLeftOf="@+id/btnMinus"
+            app:layout_constraintTop_toTopOf="parent"
+            android:id="@+id/txtWeight"
+            android:textSize="15sp"/>
+        <Button
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:background="@drawable/reduce"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toRightOf="@+id/txtWeight"
+            app:layout_constraintRight_toRightOf="parent"
+            android:id="@+id/btnMinus"
+            />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="$10 Discount"
+        app:layout_constraintLeft_toRightOf="@+id/detail"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_margin="10dp"
+        android:background="@drawable/solidborder"
+        android:paddingHorizontal="5dp"
+        android:paddingVertical="5dp"
+        android:id="@+id/txtDiscount"
+        />
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>
